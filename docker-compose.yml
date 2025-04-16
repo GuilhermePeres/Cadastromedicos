@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: 'postgres:latest'
+    container_name: postgres
+    environment:
+      - 'POSTGRES_DB=medicos'
+      - 'POSTGRES_USER=myuser'
+      - 'POSTGRES_PASSWORD=mypassword'
+    ports:
+      - "5434:5432"
+    volumes:
+      - medicos_postgres:/var/lib/postgresql/data
+volumes:
+  medicos_postgres:

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "nome",
+    "especialidade",
+    "cidade",
+    "horariosTrabalho"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "especialidade": {
+      "type": "string"
+    },
+    "cidade": {
+      "type": "string"
+    },
+    "horariosTrabalho": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "diaDaSemana",
+          "horaInicio",
+          "horaFim"
+        ],
+        "properties": {
+          "diaDaSemana": {
+            "type": "string"
+          },
+          "horaInicio": {
+            "type": "string"
+          },
+          "horaFim": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
