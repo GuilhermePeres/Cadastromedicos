@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  postgres:
+  postgres_medicos:
     image: 'postgres:latest'
-    container_name: postgres
+    container_name: postgres_medicos
     environment:
       - 'POSTGRES_DB=medicos'
       - 'POSTGRES_USER=myuser'
